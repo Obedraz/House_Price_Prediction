@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            background-image: url('https://pngmagic.com/product_images/light-blue-website-background-image.jpg'); /* Add a background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 100px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .welcome-text {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5a5a5a;
+        }
+        .form-control {
+            padding-left: 40px; /* Space for the icons */
+        }
+        .form-group i {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+            color: #aaa;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="data:image/png;base64,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" alt="SmartHomeEstimator Logo" class="logo">
+    
+    <div class="welcome-text">
+        Welcome to SmartHomeEstimator – Know Your Home’s True Value
+    </div>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-{{ messages[0][0] }}">
+                {{ messages[0][1] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <form method="POST">
+        <div class="form-group position-relative">
+            <i class="fas fa-user"></i> <!-- FontAwesome user icon -->
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group position-relative">
+            <i class="fas fa-lock"></i> <!-- FontAwesome lock icon -->
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+    <p class="text-center mt-3">Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a></p>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome Icons -->
+
+</body>
+</html>
